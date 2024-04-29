@@ -1,6 +1,15 @@
+import Navbar from './components/common/Navbar/Navbar';
+import Home from './pages/HomePage/Home';
 function App() {
   return (
-    <div>Hello World</div>
+    <>
+      <div className="navbar">
+        <Navbar />
+      </div>
+      <div className="home">
+        <Home />
+      </div>
+    </>
   )
 }
 

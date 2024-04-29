@@ -1,0 +1,37 @@
+@use '../../helpers/maxin' as *;
+
+// @use '../../helpers/global ' as *;
+.home {
+   .content {
+      @include flex(row, space-between, start);
+
+      @include sm {
+         @include flex(column, space-between, start);
+      }
+
+      @include md {
+         @include flex(column, space-between, start);
+      }
+
+      .textContainer {
+         flex: 3;
+
+         p {
+            line-height: 1.5;
+            font-size: 21px;
+            padding-top: 18px;
+         }
+      }
+
+      .imgContainer {
+         flex: 2;
+         @include flex(row, center);
+         img {
+            width: 100%;
+            @include md{
+               width: 75%;
+            }
+         }
+      }
+   }
+}

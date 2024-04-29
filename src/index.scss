@@ -1,0 +1,101 @@
+@use './helpers/maxin' as *;
+@use './helpers/global' as *;
+
+*{
+   padding: 0;
+   margin: 0;
+   scroll-behavior: smooth;
+}
+html,body{
+   max-width: 100% ;
+   overflow-x: hidden;
+}
+/*- style for Navbar -*/
+$fontsize: 21px;
+
+nav {
+   height: 100px;
+   @include flex(row, space-between, center);
+
+   .logo h3 {
+      font-weight: bolder;
+      letter-spacing: 1.3px
+   }
+
+   .left {
+      @include flex(row, start, center);
+      flex: 3;
+      gap: 50px;
+   }
+
+   .right {
+      @include flex(row, end, center);
+      flex: 2;
+      .loginBtn{
+         @include sm {
+               display: none;
+            }
+      }
+   }
+
+   .left,
+   .right {
+      height: 100%;
+   }
+   ul {
+      @include flex(row, space-between, center);
+      @include sm {
+         display: none;
+      }
+   }
+
+   li {
+      margin-right: 18px;
+      text-transform: capitalize;
+      font-size: $fontsize;
+   }
+
+   .menueIcon {
+      display: none;
+      cursor: pointer;
+      @include sm {
+         display: block;
+         z-index: 110;
+      }
+   }
+   img{
+      width: 36px;
+   }
+   .menue {
+      z-index: -1;
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      background-color: black;
+      width: 50%;
+      height: 100vh;
+      color: $primary-color ;
+      transition: .5s ease-in-out;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -ms-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      z-index: 100;
+      ul{
+         display: block;
+         @include flex(column,center,center);
+         height: 100%;
+         li{
+            margin: 12px 0px;
+         }
+      }
+      &.active{
+         right: 0;
+      }
+      @include sm {
+         display: block;
+      }
+   }
+
+}
