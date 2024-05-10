@@ -1,0 +1,86 @@
+@use '../../../helpers/global' as *;
+@use '../../../helpers/maxin' as *;
+
+.SearchBar {
+   margin: 30px 0px;
+
+   .type {
+      button {
+         border-radius: 0;
+         -webkit-border-radius: 0;
+         -moz-border-radius: 0;
+         -ms-border-radius: 0;
+         -o-border-radius: 0;
+         background-color: $primary-color;
+         color: $black-color;
+         border: 1px solid #999;
+         border-bottom: none;
+
+         &.activeBtn {
+            background-color: $black-color;
+            color: $primary-color;
+         }
+
+         &:first-child {
+            border-top-left-radius: 5px;
+            border-right: none;
+         }
+
+         &:last-child {
+            border-top-right-radius: 5px;
+            border-left: none;
+         }
+      }
+
+      button:hover {
+         transform: scale(1);
+         -webkit-transform: scale(1);
+         -moz-transform: scale(1);
+         -ms-transform: scale(1);
+         -o-transform: scale(1);
+      }
+   }
+
+   form {
+      @include flex(row, space-between, center);
+
+      @include sm {
+         @include flex(column, start, start);
+         border-left: 1px solid #999;
+      }
+
+      // width: 75%;
+      border: 1.2px solid #999;
+
+      input {
+         border: none;
+         padding: 10px 15px;
+         font-size: 18px;
+         &:focus {
+            border: none;
+            outline: none;
+         }
+         @include md{
+            width: auto;
+         }
+         @include sm{
+            width: auto;
+         }
+      }
+      button {
+         border-radius: 0px;
+         transform: scale(1);
+         -webkit-transform: scale(1);
+         -moz-transform: scale(1);
+         -ms-transform: scale(1);
+         -o-transform: scale(1);
+         -webkit-border-radius: 0px;
+         -moz-border-radius: 0px;
+         -ms-border-radius: 0px;
+         -o-border-radius: 0px;
+         @include sm{
+            width: 100%;
+         }
+      }
+   }
+}

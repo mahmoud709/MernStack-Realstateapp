@@ -4,7 +4,7 @@
 .home {
    .content {
       @include flex(row, space-between, start);
-
+      gap: 50px;
       @include sm {
          @include flex(column, space-between, start);
       }
@@ -21,14 +21,38 @@
             font-size: 21px;
             padding-top: 18px;
          }
+
+         .wrapper {
+            .boxs {
+               width: 100%;
+               @include flex(row, space-between, start);
+               gap: 25px;
+
+               @include sm {
+                  @include flex(column, center, center);
+               }
+
+               .box {
+                  h2 {
+                     text-align: center;
+                  }
+
+                  h3 {
+                     padding: 12px 0px;
+                  }
+               }
+            }
+         }
       }
 
       .imgContainer {
          flex: 2;
          @include flex(row, center);
+
          img {
             width: 100%;
-            @include md{
+
+            @include md {
                width: 75%;
             }
          }
