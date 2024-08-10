@@ -1,14 +1,14 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "../components/common/Navbar/Navbar";
-import Home from "../pages/HomePage/Home";
 
 export default function MainLayout() {
   return (
-    <>
+    <div className="container">
       <div className="navbar">
         <Navbar />
       </div>
       <div className="content">
-        <Home />
+        <Outlet />
       </div>
-    </>)
+    </div>)
 }

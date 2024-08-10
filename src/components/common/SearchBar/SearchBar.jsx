@@ -7,8 +7,8 @@ export default function SearchBar() {
   const [query, setQuery] = useState({
     type: "buy",
     location: "",
-    minprice: 0,
-    maxprice: 0
+    minPrice: 0,
+    maxPrice: 0,
   })
   function switchType(val) {
     setQuery((prev) => ({ ...prev, type: val }))
@@ -16,9 +16,9 @@ export default function SearchBar() {
   return (
     <div className='SearchBar'>
       <div className="type">
-        {types.map((btn, index) => {
+        {types.map((el, index) => {
           return (
-            <button key={index} className={query.type === btn ? "activeBtn" : ""} onClick={() => switchType(btn)}>{btn}</button>
+            <button key={index} className={`${query.type === el ? "activeBtn" : ""}`} onClick={() => switchType(el)}>{el}</button>
           )
         })}
       </div>

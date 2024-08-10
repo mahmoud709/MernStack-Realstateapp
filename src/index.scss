@@ -1,21 +1,26 @@
 @use './helpers/maxin' as *;
 @use './helpers/global' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
    padding: 0;
    margin: 0;
+   font-family: "Roboto", sans-serif;
    scroll-behavior: smooth;
 }
-html,body{
-   max-width: 100% ;
+html,
+body {
+   max-width: 100%;
    overflow-x: hidden;
 }
+
 /*- style for Navbar -*/
 $fontsize: 21px;
 
 nav {
    height: 100px;
    @include flex(row, space-between, center);
+
    .logo h3 {
       font-weight: bolder;
       letter-spacing: 1.3px
@@ -30,9 +35,9 @@ nav {
    .right {
       @include flex(row, end, center);
       flex: 2;
-      .loginBtn{
+.loginBtn {
          @include sm {
-               display: none;
+            display: none;
             }
       }
    }
@@ -41,30 +46,35 @@ nav {
    .right {
       height: 100%;
    }
+
    ul {
       @include flex(row, space-between, center);
+
       @include sm {
          display: none;
       }
    }
 
-   li {
+                                                                                                                                                                                                a {
       margin-right: 18px;
       text-transform: capitalize;
       font-size: $fontsize;
+      color: var(--black-color);
    }
 
    .menueIcon {
       display: none;
       cursor: pointer;
+
       @include sm {
          display: block;
          z-index: 110;
       }
    }
-   img{
+img {
       width: 36px;
    }
+
    .menue {
       z-index: -1;
       display: none;
@@ -81,17 +91,18 @@ nav {
       -ms-transition: .5s ease-in-out;
       -o-transition: .5s ease-in-out;
       z-index: 100;
-      ul{
+ul {
          display: block;
-         @include flex(column,center,center);
+         @include flex(column, center, center);
          height: 100%;
-         li{
+a {
             margin: 12px 0px;
          }
       }
-      &.active{
+&.active {
          right: 0;
       }
+
       @include sm {
          display: block;
       }

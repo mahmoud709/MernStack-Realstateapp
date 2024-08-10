@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import menueIcon from '../../../assets/images/menu.png';
+import { NavLink } from 'react-router-dom';
 export default function Navbar() {
    const [open,setOpen ] = useState(false);
    return (
-      <div className="container">
+
          <nav>
             <div className="left">
                <div className="logo">
                   <h2>RealeState</h2>
                </div>
                <ul>
-                  <li>home</li>
-                  <li>about</li>
-                  <li>contact</li>
-                  <li>agents</li>
+               <NavLink to="/">home</NavLink>
+               <NavLink to="">about</NavLink>
+               <NavLink to="">contact</NavLink>
+               <NavLink to="">agents</NavLink>
                </ul>
             </div>
             <div className="right">
@@ -33,7 +34,6 @@ export default function Navbar() {
                   <li>login</li>
                </ul>
             </div>
-         </nav>
-      </div>
+      </nav>
    )
 }

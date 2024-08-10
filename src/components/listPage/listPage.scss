@@ -1,0 +1,26 @@
+@use '../../helpers/maxin' as *;
+
+.listPage {
+   display: flex;
+
+   @include sm {
+      flex-direction: column;
+   }
+
+   .listContainer {
+      flex: 3;
+
+      .wrapper {
+         padding-right: 50px;
+
+         @include sm {
+            padding: 0;
+         }
+      }
+   }
+
+   .mapContainer {
+      flex: 2;
+      height: 100%;
+   }
+}

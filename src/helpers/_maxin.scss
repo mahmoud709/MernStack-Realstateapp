@@ -21,7 +21,6 @@
 @mixin flex($dir, $justify: null, $align: null) {
    display: flex;
    flex-direction: $dir;
-
    @if justify !=null {
       justify-content: $justify;
    }

@@ -3,7 +3,7 @@ import homeBg from '../../assets/images/bg.png';
 import SearchBar from '../../components/common/SearchBar/SearchBar';
 export default function Home() {
    return (
-      <div className='container home'>
+      <div className='home'>
          <div className='content'>
             <div className="textContainer">
                <div className="wrapper">
