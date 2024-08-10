@@ -1,13 +1,84 @@
+@use '../../helpers/maxin' as *;
 .singlePage {
    display: flex;
    height: 100%;
 
    .details {
       flex: 3;
+      .wrapper {
+            padding-right: 50px;
+      
+            .info {
+               margin-top: 30px;
+      
+               .top {
+                  @include flex(row, space-between, start);
+      
+                  .post {
+                     @include flex(column);
+                     gap: 20px;
+      
+                     h1 {
+                        font-weight: 500;
+                     }
+      
+                     .address {
+                        @include flex(row, start, center);
+                        color: #888;
+                        font-size: 14px;
+                     }
+      
+                     .price {
+                        padding: 5px;
+                        background-color: rgba(254, 205, 81, .583);
+                        width: fit-content;
+                        padding: 8px;
+                        font-size: 20px;
+                        border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        -ms-border-radius: 5px;
+                        -o-border-radius: 5px;
+                     }
+                  }
+      
+                  .user {
+                     @include flex(column, center, center);
+                     text-align: center;
+                     background-color: rgba(252, 230, 175, 0.583);
+                     gap: 20px;
+                     padding: 18px;
+                     border-radius: 10px;
+                     -webkit-border-radius: 10px;
+                     -moz-border-radius: 10px;
+                     -ms-border-radius: 10px;
+                     -o-border-radius: 10px;
+      
+                     img {
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        object-fit: cover;
+                     }
+                  }
+               }
+      
+               .bottom {
+                  p {
+                     margin-top: 30px;
+                     color: #555;
+                     line-height: 20px;
+                  }
+               }
+            }
+         }
    }
 
    .features {
       flex: 2;
       background-color: #fcf5f3;
+      .wrapper {}
    }
 }

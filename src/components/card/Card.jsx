@@ -9,7 +9,7 @@ export default function Card({ item }) {
    return (
       <div className="item-card">
          <div className="card-image">
-            <Link to={`/${item.id}`}>
+            <Link to={`/list/${item.id}`}>
                <img src={item.img} alt={item.title} />
             </Link>
          </div>

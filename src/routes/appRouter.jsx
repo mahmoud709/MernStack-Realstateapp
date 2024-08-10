@@ -17,12 +17,10 @@ export default function AppRouter() {
             {
                path: '/list',
                element: <ListPage />,
-               children: [
-                  {
-                     path: ':id',
-                     element: <SinglePage />
-                  }
-               ]
+            },
+            {
+               path: '/list/:id',
+               element: <SinglePage />
             }
          ]
       }

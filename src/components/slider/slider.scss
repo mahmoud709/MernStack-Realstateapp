@@ -1,0 +1,38 @@
+@use '../../helpers/maxin' as *;
+
+.slider {
+   width: 100%;
+   height: 350px;
+   display: flex;
+   gap: 20px;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      cursor: pointer;
+   }
+
+   .bigImage {
+      flex: 3;
+
+
+   }
+
+   .smallImages {
+      flex: 1;
+      @include flex(column, space-between);
+      gap: 20px;
+      height: 100%;
+
+      img {
+         width: 100%;
+         height: 100px;
+      }
+   }
+}
