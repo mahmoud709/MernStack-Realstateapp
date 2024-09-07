@@ -1,7 +1,24 @@
+import { useEffect } from 'react';
 import './home.scss';
 import homeBg from '../../assets/images/bg.png';
 import SearchBar from '../../components/common/SearchBar/SearchBar';
+
 export default function Home() {
+   useEffect(() => {
+      // Dynamically inject the Tawk.to script
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = 'https://embed.tawk.to/66dccc5fea492f34bc0f2703/1i777sltp';
+      script.charset = 'UTF-8';
+      script.setAttribute('crossorigin', '*');
+      document.body.appendChild(script);
+
+      return () => {
+         // Clean up the script if the component unmounts
+         document.body.removeChild(script);
+      };
+   }, []);
+
    return (
       <div className='home'>
          <div className='content'>
@@ -33,5 +50,6 @@ export default function Home() {
             </div>
          </div>
       </div>
-   )
+   );
 }
+
